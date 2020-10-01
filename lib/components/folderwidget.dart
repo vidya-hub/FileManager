@@ -20,9 +20,17 @@ class ListTileWidFolder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        child: ListTile(
-          title: Image.asset("images/folder.png"),
-          subtitle: Text(item.path.split("/")[item.path.split("/").length - 1]),
+        child: Card(
+          child: ListTile(
+            // shape: ShapeBorder.lerp(ShapeBorder(, b, t),
+            title: Image.asset(
+              "images/folder2.png",
+              scale: 6,
+            ),
+            subtitle: Text(
+                item.path.split("/")[item.path.split("/").length - 1],
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+          ),
         ),
         onTap: () {
           Navigator.push(

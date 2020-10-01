@@ -109,9 +109,16 @@ class _MyAppState extends State<MyApp> {
                       ),
                     );
                   },
-                  child: ListTile(
-                    title: Image.asset("images/folder.png"),
-                    subtitle: Text(listofStorages[index]),
+                  child: Card(
+                    child: ListTile(
+                      title: Image.asset(
+                        "images/folder2.png",
+                        scale: 6,
+                      ),
+                      subtitle: Text(listofStorages[index],
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14)),
+                    ),
                   ),
                 );
               },

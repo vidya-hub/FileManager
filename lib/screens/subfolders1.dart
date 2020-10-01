@@ -68,7 +68,10 @@ class _SubDirsState extends State<SubDirs> {
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
         centerTitle: true,
-        title: Text(widget.dirName.split("/")[2]),
+        title: Text(
+          widget.dirName.split("/")[widget.dirName.split("/").length - 2],
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: Container(
         child: Center(
