@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+// import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:vidfiles/screens/subfolders1.dart';
@@ -45,18 +46,15 @@ class _MyAppState extends State<MyApp> {
         listofStorages.clear();
       });
 
-      String internalStoragepath = "/" +
-          pathInternal[0] +
+      String internalStoragepath = pathInternal[0] +
           pathInternal[1] +
           "/" +
           pathInternal[2] +
           "/" +
-          pathInternal[3] +
-          "/";
+          pathInternal[3];
 
       List pathSdcard = value[1].path.split("/");
-      String externalPath =
-          "/" + pathSdcard[0] + pathSdcard[1] + "/" + pathSdcard[2] + "/";
+      String externalPath = pathSdcard[0] + pathSdcard[1] + "/" + pathSdcard[2];
       print(internalStoragepath);
       print(externalPath);
 

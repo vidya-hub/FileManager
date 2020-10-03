@@ -28,8 +28,8 @@ class ListTileWidFolder extends StatelessWidget {
               scale: 6,
             ),
             subtitle: Text(
-                item.path.split("/")[item.path.split("/").length - 1],
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              item.path.split("/")[item.path.split("/").length - 1],
+            ),
           ),
         ),
         onTap: () {

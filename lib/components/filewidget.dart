@@ -23,8 +23,9 @@ class ListTileWidFile extends StatelessWidget {
     bool imagPath = FileImages().imagesMap.containsKey(type);
     return GestureDetector(
       onTap: () {
-        // print(item);
-        // OpenFile.open(item.toString());
+        OpenFile.open(item.path).then((value) {
+          print(value.message);
+        });
       },
       child: Card(
         child: ListTile(
